@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbFamily = new System.Windows.Forms.TextBox();
-            this.tbModel = new System.Windows.Forms.TextBox();
-            this.tbSocket = new System.Windows.Forms.TextBox();
-            this.tbCores = new System.Windows.Forms.TextBox();
             this.tbFreq = new System.Windows.Forms.TextBox();
+            this.tbCores = new System.Windows.Forms.TextBox();
+            this.tbSocket = new System.Windows.Forms.TextBox();
+            this.tbModel = new System.Windows.Forms.TextBox();
+            this.tbFamily = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chbHasMultiplier = new System.Windows.Forms.CheckBox();
             this.chbHasGraphics = new System.Windows.Forms.CheckBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.chbHasMultiplier = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,88 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Загальні дані";
             // 
+            // tbFreq
+            // 
+            this.tbFreq.Location = new System.Drawing.Point(141, 140);
+            this.tbFreq.Name = "tbFreq";
+            this.tbFreq.Size = new System.Drawing.Size(100, 20);
+            this.tbFreq.TabIndex = 9;
+            this.tbFreq.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFreq_KeyPress);
+            // 
+            // tbCores
+            // 
+            this.tbCores.Location = new System.Drawing.Point(141, 114);
+            this.tbCores.Name = "tbCores";
+            this.tbCores.Size = new System.Drawing.Size(100, 20);
+            this.tbCores.TabIndex = 8;
+            this.tbCores.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCores_KeyPress);
+            // 
+            // tbSocket
+            // 
+            this.tbSocket.Location = new System.Drawing.Point(141, 87);
+            this.tbSocket.Name = "tbSocket";
+            this.tbSocket.Size = new System.Drawing.Size(100, 20);
+            this.tbSocket.TabIndex = 7;
+            // 
+            // tbModel
+            // 
+            this.tbModel.Location = new System.Drawing.Point(141, 59);
+            this.tbModel.Name = "tbModel";
+            this.tbModel.Size = new System.Drawing.Size(100, 20);
+            this.tbModel.TabIndex = 6;
+            // 
+            // tbFamily
+            // 
+            this.tbFamily.Location = new System.Drawing.Point(141, 31);
+            this.tbFamily.Name = "tbFamily";
+            this.tbFamily.Size = new System.Drawing.Size(100, 20);
+            this.tbFamily.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Тактова частота";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Кількість ядер";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Тип роз\'єму";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Модель";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Сімейство процесор";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.chbHasMultiplier);
@@ -78,87 +160,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Додатково";
             // 
-            // label1
+            // chbHasMultiplier
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Сімейство процесор";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Модель";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Тип роз\'єму";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 117);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Кількість ядер";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Тактова частота";
-            // 
-            // tbFamily
-            // 
-            this.tbFamily.Location = new System.Drawing.Point(141, 31);
-            this.tbFamily.Name = "tbFamily";
-            this.tbFamily.Size = new System.Drawing.Size(100, 20);
-            this.tbFamily.TabIndex = 5;
-            // 
-            // tbModel
-            // 
-            this.tbModel.Location = new System.Drawing.Point(141, 59);
-            this.tbModel.Name = "tbModel";
-            this.tbModel.Size = new System.Drawing.Size(100, 20);
-            this.tbModel.TabIndex = 6;
-            // 
-            // tbSocket
-            // 
-            this.tbSocket.Location = new System.Drawing.Point(141, 87);
-            this.tbSocket.Name = "tbSocket";
-            this.tbSocket.Size = new System.Drawing.Size(100, 20);
-            this.tbSocket.TabIndex = 7;
-            // 
-            // tbCores
-            // 
-            this.tbCores.Location = new System.Drawing.Point(141, 114);
-            this.tbCores.Name = "tbCores";
-            this.tbCores.Size = new System.Drawing.Size(100, 20);
-            this.tbCores.TabIndex = 8;
-            this.tbCores.TextChanged += new System.EventHandler(this.tbCores_TextChanged);
-            // 
-            // tbFreq
-            // 
-            this.tbFreq.Location = new System.Drawing.Point(141, 140);
-            this.tbFreq.Name = "tbFreq";
-            this.tbFreq.Size = new System.Drawing.Size(100, 20);
-            this.tbFreq.TabIndex = 9;
-            this.tbFreq.TextChanged += new System.EventHandler(this.tbFreq_TextChanged);
+            this.chbHasMultiplier.AutoSize = true;
+            this.chbHasMultiplier.Location = new System.Drawing.Point(19, 47);
+            this.chbHasMultiplier.Name = "chbHasMultiplier";
+            this.chbHasMultiplier.Size = new System.Drawing.Size(171, 17);
+            this.chbHasMultiplier.TabIndex = 7;
+            this.chbHasMultiplier.Text = "Помножувач розблокований";
+            this.chbHasMultiplier.UseVisualStyleBackColor = true;
             // 
             // chbHasGraphics
             // 
@@ -190,16 +200,6 @@
             this.btnCancel.Text = "Скасувати";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // chbHasMultiplier
-            // 
-            this.chbHasMultiplier.AutoSize = true;
-            this.chbHasMultiplier.Location = new System.Drawing.Point(19, 47);
-            this.chbHasMultiplier.Name = "chbHasMultiplier";
-            this.chbHasMultiplier.Size = new System.Drawing.Size(171, 17);
-            this.chbHasMultiplier.TabIndex = 7;
-            this.chbHasMultiplier.Text = "Помножувач розблокований";
-            this.chbHasMultiplier.UseVisualStyleBackColor = true;
             // 
             // fProcessor
             // 

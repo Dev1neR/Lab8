@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Lab8Library
 {
@@ -23,7 +24,7 @@ namespace Lab8Library
                     !value.Equals("FX") &&
                     !value.Equals("Ryzen"))
                 {
-                    throw new InvalidFamilyException();
+                    MessageBox.Show("Неправильне сімейство процесора.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -31,6 +32,34 @@ namespace Lab8Library
                 }
             }
         }
+        //public string Family
+        //{
+        //    get { return family; }
+        //    set
+        //    {
+        //        try
+        //        {
+        //            if (!value.Equals("i3") &&
+        //                !value.Equals("i5") &&
+        //                !value.Equals("i7") &&
+        //                !value.Equals("Pentium") &&
+        //                !value.Equals("Athlon") &&
+        //                !value.Equals("FX") &&
+        //                !value.Equals("Ryzen"))
+        //            {
+        //                throw new InvalidFamilyException();
+        //            }
+        //            else
+        //            {
+        //                family = value;
+        //            }
+        //        }
+        //        catch (InvalidFamilyException ex)
+        //        {
+        //            MessageBox.Show(ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //    }
+        //}
 
         private string model;
         public string Model
@@ -94,7 +123,9 @@ namespace Lab8Library
                     freq = value;
                 }
                 else
-                    throw new InvalidFreqException();
+                {
+                    MessageBox.Show("Неправильна внутрішня частота.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

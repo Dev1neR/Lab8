@@ -47,30 +47,26 @@ namespace Lab8
                 tbSocket.Text = TheProcessor.Socket;
                 tbCores.Text = TheProcessor.Cores.ToString("");
                 tbFreq.Text = TheProcessor.Freq.ToString("");
-                //tbSquare.Text = TheTown.Square.ToString("0.000");
                 chbHasMultiplier.Checked = TheProcessor.HasMultiplier;
                 chbHasGraphics.Checked = TheProcessor.HasGraphics;
             }
         }
 
-        private void tbCores_TextChanged(object sender, EventArgs e)
+        private void tbCores_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(tbCores.Text, "[^0-9]"))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '\b'))
             {
-                MessageBox.Show("Заборонено використання літер.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tbCores.Text = tbCores.Text.Remove(tbCores.Text.Length - 1);
+                MessageBox.Show("Заборонено використання літер та десяткових чисел.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
             }
         }
 
-        private void tbFreq_TextChanged(object sender, EventArgs e)
+        private void tbFreq_KeyPress(object sender, KeyPressEventArgs e)
         {
-            try
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '\b'))
             {
-                Double d = Double.Parse(tbFreq.Text);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Заборонено використання літер.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Заборонено використання літер та десяткових чисел.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
             }
         }
     }
