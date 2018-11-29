@@ -14,7 +14,13 @@ namespace Lab8Library
             get { return family; }
             set
             {
-                if (value.Length > 10)
+                if (!value.Equals("i3") &&
+                    !value.Equals("i5") &&
+                    !value.Equals("i7") &&
+                    !value.Equals("Pentium") &&
+                    !value.Equals("Athlon") &&
+                    !value.Equals("FX") &&
+                    !value.Equals("Ryzen"))
                 {
                     throw new InvalidFamilyException();
                 }
