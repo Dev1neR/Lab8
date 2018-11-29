@@ -11,7 +11,7 @@ namespace Lab8Library
         public ProcessorException(string message) : base(message) { }
     }
 
-    public class InvalidFamilyException : ProcessorException
+    public class InvalidFamilyException : Exception
     {
         public InvalidFamilyException() : base("Type correct family") { }
     }

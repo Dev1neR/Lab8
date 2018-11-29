@@ -9,7 +9,6 @@ namespace Lab8Library
 {
     public class Processor
     {
-
         private string family;
         //public string Family
         //{
@@ -45,6 +44,7 @@ namespace Lab8Library
                     !value.Equals("FX") &&
                     !value.Equals("Ryzen"))
                 {
+                    MessageBox.Show("Неправильне сімейство процесора.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw new InvalidFamilyException();
                 }
                 else
@@ -62,6 +62,7 @@ namespace Lab8Library
             {
                 if (value.Length > 5)
                 {
+                    MessageBox.Show("Неправильна модель процесора.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw new InvalidModelException();
                 }
                 else
@@ -79,6 +80,7 @@ namespace Lab8Library
             {
                 if (value.Length > 6)
                 {
+                    MessageBox.Show("Неправильний тип роз'єму.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw new InvalidSocketException();
                 }
                 else
@@ -96,6 +98,7 @@ namespace Lab8Library
             {
                 if (value > 16)
                 {
+                    MessageBox.Show("Неправильна кількість ядер.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw new InvalidCoresException();
                 }
                 else
@@ -117,6 +120,7 @@ namespace Lab8Library
                 }
                 else
                 {
+                    MessageBox.Show("Неправильна внутрішня частота.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw new InvalidFreqException();
                 }
             }
