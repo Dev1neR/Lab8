@@ -18,6 +18,7 @@ namespace Lab8
             InitializeComponent();
         }
 
+
         private void btnAddProcessor_Click(object sender, EventArgs e)
         {
             Processor processor = new Processor();
@@ -26,7 +27,8 @@ namespace Lab8
 
             if (fp.ShowDialog() == DialogResult.OK)
             {
-                tbProcessorInfo.Text += processor.ToString();
+                //tbProcessorInfo.Text += processor.ToString();
+                lbProcessorInfo.Items.Add(processor.ToString());
             }
         }
 

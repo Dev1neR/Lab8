@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbProcessorInfo = new System.Windows.Forms.TextBox();
             this.btnAddProcessor = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lbProcessorInfo = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // tbProcessorInfo
-            // 
-            this.tbProcessorInfo.Location = new System.Drawing.Point(12, 5);
-            this.tbProcessorInfo.Multiline = true;
-            this.tbProcessorInfo.Name = "tbProcessorInfo";
-            this.tbProcessorInfo.ReadOnly = true;
-            this.tbProcessorInfo.Size = new System.Drawing.Size(648, 239);
-            this.tbProcessorInfo.TabIndex = 0;
             // 
             // btnAddProcessor
             // 
@@ -62,28 +53,34 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lbProcessorInfo
+            // 
+            this.lbProcessorInfo.FormattingEnabled = true;
+            this.lbProcessorInfo.Location = new System.Drawing.Point(12, 6);
+            this.lbProcessorInfo.Name = "lbProcessorInfo";
+            this.lbProcessorInfo.Size = new System.Drawing.Size(648, 238);
+            this.lbProcessorInfo.TabIndex = 3;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 252);
+            this.Controls.Add(this.lbProcessorInfo);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddProcessor);
-            this.Controls.Add(this.tbProcessorInfo);
             this.MaximizeBox = false;
             this.Name = "fMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Лабораторна робота №8";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tbProcessorInfo;
         private System.Windows.Forms.Button btnAddProcessor;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ListBox lbProcessorInfo;
     }
 }
 

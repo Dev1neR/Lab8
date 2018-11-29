@@ -8,6 +8,7 @@ namespace Lab8Library
 {
     public class Processor
     {
+        public int Id {get; set;}
         private string family;
         public string Family
         {
@@ -65,8 +66,8 @@ namespace Lab8Library
             }
         }
 
-        private double cores;
-        public double Cores
+        private int cores;
+        public int Cores
         {
             get { return cores; }
             set

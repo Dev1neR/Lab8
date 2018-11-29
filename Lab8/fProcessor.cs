@@ -25,7 +25,7 @@ namespace Lab8
             TheProcessor.Family = tbFamily.Text.Trim();
             TheProcessor.Model = tbModel.Text.Trim();
             TheProcessor.Socket = tbSocket.Text.Trim();
-            TheProcessor.Cores = double.Parse(tbCores.Text.Trim());
+            TheProcessor.Cores = int.Parse(tbCores.Text.Trim());
             TheProcessor.Freq = int.Parse(tbFreq.Text.Trim());
             TheProcessor.HasMultiplier = chbHasMultiplier.Checked;
             TheProcessor.HasGraphics = chbHasGraphics.Checked;
