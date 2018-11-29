@@ -1,0 +1,11 @@
+*.dll
+*.obj
+*.exe
+Debug
+.vs
+bin
+obj
+packages
+
+Lab8Library/bin
+Lab8Library/obj
