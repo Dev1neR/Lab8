@@ -6,32 +6,32 @@ using System.Threading.Tasks;
 
 namespace Lab8Library
 {
-    class ProcessorException : Exception
+    public class ProcessorException : Exception
     {
         public ProcessorException(string message) : base(message) { }
     }
 
-    class InvalidFamilyException : ProcessorException
+    public class InvalidFamilyException : ProcessorException
     {
         public InvalidFamilyException() : base("Type correct family") { }
     }
 
-    class InvalidModelException : ProcessorException
+    public class InvalidModelException : ProcessorException
     {
         public InvalidModelException() : base("Invalid model") { }
     }
 
-    class InvalidFreqException : ProcessorException
+    public class InvalidFreqException : ProcessorException
     {
         public InvalidFreqException() : base("Processor with this frequency does not exist") { }
     }
 
-    class InvalidSocketException : ProcessorException
+    public class InvalidSocketException : ProcessorException
     {
         public InvalidSocketException() : base("Invalid Socket") { }
     }
 
-    class InvalidCoresException : ProcessorException
+    public class InvalidCoresException : ProcessorException
     {
         public InvalidCoresException() : base("Invalid number of cores") { }
     }

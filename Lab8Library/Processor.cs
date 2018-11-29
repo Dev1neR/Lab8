@@ -9,8 +9,29 @@ namespace Lab8Library
 {
     public class Processor
     {
-        public int Id {get; set;}
+
         private string family;
+        //public string Family
+        //{
+        //    get { return family; }
+        //    set
+        //    {
+        //        if (!value.Equals("i3") &&
+        //            !value.Equals("i5") &&
+        //            !value.Equals("i7") &&
+        //            !value.Equals("Pentium") &&
+        //            !value.Equals("Athlon") &&
+        //            !value.Equals("FX") &&
+        //            !value.Equals("Ryzen"))
+        //        {
+        //            MessageBox.Show("Неправильне сімейство процесора.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //        else
+        //        {
+        //            family = value;
+        //        }
+        //    }
+        //}
         public string Family
         {
             get { return family; }
@@ -24,7 +45,7 @@ namespace Lab8Library
                     !value.Equals("FX") &&
                     !value.Equals("Ryzen"))
                 {
-                    MessageBox.Show("Неправильне сімейство процесора.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new InvalidFamilyException();
                 }
                 else
                 {
@@ -32,34 +53,6 @@ namespace Lab8Library
                 }
             }
         }
-        //public string Family
-        //{
-        //    get { return family; }
-        //    set
-        //    {
-        //        try
-        //        {
-        //            if (!value.Equals("i3") &&
-        //                !value.Equals("i5") &&
-        //                !value.Equals("i7") &&
-        //                !value.Equals("Pentium") &&
-        //                !value.Equals("Athlon") &&
-        //                !value.Equals("FX") &&
-        //                !value.Equals("Ryzen"))
-        //            {
-        //                throw new InvalidFamilyException();
-        //            }
-        //            else
-        //            {
-        //                family = value;
-        //            }
-        //        }
-        //        catch (InvalidFamilyException ex)
-        //        {
-        //            MessageBox.Show(ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        }
-        //    }
-        //}
 
         private string model;
         public string Model
@@ -124,7 +117,7 @@ namespace Lab8Library
                 }
                 else
                 {
-                    MessageBox.Show("Неправильна внутрішня частота.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new InvalidFreqException();
                 }
             }
         }
