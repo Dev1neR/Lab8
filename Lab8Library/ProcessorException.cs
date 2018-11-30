@@ -13,26 +13,26 @@ namespace Lab8Library
 
     public class InvalidFamilyException : Exception
     {
-        public InvalidFamilyException() : base("Type correct family") { }
+        public InvalidFamilyException() : base("Неправильне сімейство процесора.") { }
     }
 
     public class InvalidModelException : ProcessorException
     {
-        public InvalidModelException() : base("Invalid model") { }
+        public InvalidModelException() : base("Неправильна модель процесора.") { }
     }
 
     public class InvalidFreqException : ProcessorException
     {
-        public InvalidFreqException() : base("Processor with this frequency does not exist") { }
+        public InvalidFreqException() : base("Неправильна внутрішня частота.") { }
     }
 
     public class InvalidSocketException : ProcessorException
     {
-        public InvalidSocketException() : base("Invalid Socket") { }
+        public InvalidSocketException() : base("Неправильний тип роз'єму.") { }
     }
 
     public class InvalidCoresException : ProcessorException
     {
-        public InvalidCoresException() : base("Invalid number of cores") { }
+        public InvalidCoresException() : base("Неправильна кількість ядер.") { }
     }
 }

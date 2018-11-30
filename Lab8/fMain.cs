@@ -13,9 +13,20 @@ namespace Lab8
 {
     public partial class fMain : Form
     {
+
         public fMain()
         {
             InitializeComponent();
+
+            List<Processor> _processors = new List<Processor>
+            {
+                new Processor {Id = 1, Family = "i5", Model = "4790", Cores = 8, Socket = "1151", Freq = 3200, HasMultiplier = true, HasGraphics = false},
+                new Processor {Id = 2, Family = "i7", Model = "4690", Cores = 4, Socket = "1151", Freq = 3600, HasMultiplier = true, HasGraphics = true},
+            };
+
+            lbProcessorInfo.DataSource = _processors;
+            //lbProcessorInfo.DisplayMember = "Model";
+            //lbProcessorInfo.ValueMember = "Id";
         }
 
 
@@ -27,7 +38,7 @@ namespace Lab8
 
             if (fp.ShowDialog() == DialogResult.OK)
             {
-                //tbProcessorInfo.Text += processor.ToString();
+                lbProcessorInfo.DataSource = null;
                 lbProcessorInfo.Items.Add(processor.ToString());
             }
         }

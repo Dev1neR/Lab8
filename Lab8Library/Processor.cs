@@ -9,6 +9,7 @@ namespace Lab8Library
 {
     public class Processor
     {
+        public int Id { get; set; }
         private string family;
         //public string Family
         //{
@@ -131,7 +132,7 @@ namespace Lab8Library
 
         public override string ToString()
         {
-            return string.Format("{0} {1} | Socket: {2} | Ядер: {3} | Частота: {4} MHz| [{5}, {6}]\r\n",
+            return string.Format("{0} {1} | Socket: {2} | Ядер: {3} | Частота: {4} MHz | [{5}, {6}]\r\n",
                 Family, Model, Socket,
                 Cores, Freq,
                 HasMultiplier ? "Є помножувач" : "Немає помножувача",

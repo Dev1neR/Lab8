@@ -69,6 +69,7 @@
             this.Controls.Add(this.lbProcessorInfo);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddProcessor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "fMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
