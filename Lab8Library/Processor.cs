@@ -11,27 +11,6 @@ namespace Lab8Library
     {
         public int Id { get; set; }
         private string family;
-        //public string Family
-        //{
-        //    get { return family; }
-        //    set
-        //    {
-        //        if (!value.Equals("i3") &&
-        //            !value.Equals("i5") &&
-        //            !value.Equals("i7") &&
-        //            !value.Equals("Pentium") &&
-        //            !value.Equals("Athlon") &&
-        //            !value.Equals("FX") &&
-        //            !value.Equals("Ryzen"))
-        //        {
-        //            MessageBox.Show("Неправильне сімейство процесора.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        }
-        //        else
-        //        {
-        //            family = value;
-        //        }
-        //    }
-        //}
         public string Family
         {
             get { return family; }
