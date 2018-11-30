@@ -13,23 +13,25 @@ namespace Lab8
 {
     public partial class fMain : Form
     {
+        private BindingList<Processor> processors = new BindingList<Processor>();
         public fMain()
         {
             InitializeComponent();
-            List<Processor> _processors = new List<Processor>
-            {
-                new Processor {Id = 1, Family = "i5", Model = "4790", Cores = 8, Socket = "1151", Freq = 3200, HasMultiplier = true, HasGraphics = false},
-                new Processor {Id = 2, Family = "i7", Model = "4690", Cores = 4, Socket = "1151", Freq = 3600, HasMultiplier = true, HasGraphics = true},
-            };
+            //List<Processor> _processors = new List<Processor>
+            //{
+            //    new Processor {Id = 1, Family = "i5", Model = "4790", Cores = 8, Socket = "1151", Freq = 3200, HasMultiplier = true, HasGraphics = false},
+            //    new Processor {Id = 2, Family = "i7", Model = "4690", Cores = 4, Socket = "1151", Freq = 3600, HasMultiplier = true, HasGraphics = true},
+            //};
+            processors.Add(new Processor() { Id = 1, Family = "i5", Model = "4790", Cores = 8, Socket = "1151", Freq = 3200, HasMultiplier = true, HasGraphics = false });
+            processors.Add(new Processor() { Id = 2, Family = "i7", Model = "4690", Cores = 4, Socket = "1151", Freq = 3600, HasMultiplier = true, HasGraphics = true });
 
+            lbProcessorInfo.DataSource = processors;
             lbProcessorInfo.DisplayMember = "Model";
             lbProcessorInfo.ValueMember = "Id";
-            lbProcessorInfo.DataSource = _processors;
 
 
             lbProcessorInfo.SelectedIndexChanged += new EventHandler(lbProcessorInfo_SelectedIndexChanged);
         }
-
 
         private void btnAddProcessor_Click(object sender, EventArgs e)
         {
@@ -39,8 +41,7 @@ namespace Lab8
 
             if (fp.ShowDialog() == DialogResult.OK)
             {
-                lbProcessorInfo.DataSource = null;
-                lbProcessorInfo.Items.Add(processor.ToString());
+                processors.Add(processor);
             }
         }
 
