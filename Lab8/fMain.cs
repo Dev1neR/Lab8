@@ -22,12 +22,12 @@ namespace Lab8
             //    new Processor {Id = 1, Family = "i5", Model = "4790", Cores = 8, Socket = "1151", Freq = 3200, HasMultiplier = true, HasGraphics = false},
             //    new Processor {Id = 2, Family = "i7", Model = "4690", Cores = 4, Socket = "1151", Freq = 3600, HasMultiplier = true, HasGraphics = true},
             //};
-            processors.Add(new Processor() { Id = 1, Family = "i5", Model = "4790", Cores = 8, Socket = "1151", Freq = 3200, HasMultiplier = true, HasGraphics = false });
-            processors.Add(new Processor() { Id = 2, Family = "i7", Model = "4690", Cores = 4, Socket = "1151", Freq = 3600, HasMultiplier = true, HasGraphics = true });
+            processors.Add(new Processor() {Family = "i5", Model = "4790", Cores = 8, Socket = "1151", Freq = 3200, HasMultiplier = true, HasGraphics = false });
+            processors.Add(new Processor() {Family = "i7", Model = "4690", Cores = 4, Socket = "1151", Freq = 3600, HasMultiplier = true, HasGraphics = true });
 
             lbProcessorInfo.DataSource = processors;
             lbProcessorInfo.DisplayMember = "Model";
-            lbProcessorInfo.ValueMember = "Id";
+            lbProcessorInfo.ValueMember = "Family";
 
 
             lbProcessorInfo.SelectedIndexChanged += new EventHandler(lbProcessorInfo_SelectedIndexChanged);
@@ -55,10 +55,10 @@ namespace Lab8
 
         private void lbProcessorInfo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int id = (int)lbProcessorInfo.SelectedValue;
+            string family = lbProcessorInfo.SelectedValue.ToString();
 
             Processor processor = (Processor)lbProcessorInfo.SelectedItem;
-            MessageBox.Show(id.ToString() + ". " + "Процесор: " + processor.Family + " " +
+            MessageBox.Show("Процесор: " + family + " " +
                 processor.Model + " | Ядер: " +
                 processor.Cores + " | Тип роз'єму: " +
                 processor.Socket + " | Частота: " +
